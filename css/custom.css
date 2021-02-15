@@ -1,0 +1,366 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+@font-face {
+    font-family: 'Open Sans Italic';
+    src: url('../fonts/OpenSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Semi Bold';
+    src: url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Semi Bold';
+    src: url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Open Sans Regular;
+    font-size: 16px;
+    color: #000000;
+}
+
+.container {
+    max-width: 950px;
+}
+
+h1 {
+    color: #372982;
+    font-size: 36px;
+    font-family: Open Sans Semi Bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mn-header {
+    min-height: 500px;
+    background-image: url(../images/Header.png);
+    background-position: 20% -190px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+hr {
+    max-width: 70px;
+    margin: 0 auto;
+    border: 1px solid #00a585;
+}
+
+.hd-ctnr {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #ffffff;
+}
+
+.logo-img {
+    max-width: 110px;
+}
+
+.mn-ttl {
+    color: #ffffff;
+    font-size: 66px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.hdr-btm {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.space {
+    padding: 15px;
+}
+
+.space-lg {
+    padding: 25px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    min-height: 320px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    min-height: 320px;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #372982;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.flip-card-front {
+    background-color: #372982;
+    color: #ffffff;
+}
+
+.flip-card-back {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+    text-align: left;
+    font-size: 15px;
+}
+
+.flp-btm-icn {
+    bottom: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.m-auto {
+    margin: 0 auto;
+}
+
+.no-space {
+    padding-left: 0px;
+}
+
+.img-ctnr img {
+    border-radius: 5px;
+}
+
+.info-ctnr {
+    line-height: 300px;
+    min-height: 300px;
+}
+
+.info-ctnr p {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.carousel-inner {
+    background-color: #f7f6f6;
+}
+
+.crs-indtrs {
+    display: inline-block;
+}
+
+.crs-indtrs li {
+    width: 12px;
+    border: 1px solid #bbbdc0;
+    display: inline-block;
+    height: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.crs-indtrs .active {
+    background-color: #bbbdc0;
+    width: 13px;
+    height: 13px;
+}
+
+.inst {
+    color: #372982;
+    font-family: Open Sans Italic;
+    margin-bottom: 20px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.italic {
+    font-family: Open Sans Italic;
+}
+
+
+/*Clickable flipcards*/
+
+.flip-card-3D-wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    min-height: 242px;
+    position: relative;
+    -o-perspective: 900px;
+    -webkit-perspective: 900px;
+    -ms-perspective: 900px;
+    perspective: 900px;
+    margin: 0 auto;
+}
+
+.click-flip-card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -o-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.do-flip {
+    -o-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.flip-card-btn-turn-to-back,
+.flip-card-btn-turn-to-front {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    cursor: pointer;
+    visibility: hidden;
+    font-weight: 600;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.click-flip-card .click-flip-card-front,
+.click-flip-card .click-flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -o-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 2;
+    border-radius: 4px;
+}
+
+.click-flip-card-back {
+    padding: 10px;
+}
+
+.click-flip-card .click-flip-card-back {
+    background: #eeeeee;
+    -o-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.click-flip-card .click-flip-card-back p {
+    display: block;
+    position: absolute;
+    top: 30%;
+}
+
+.mini-space {
+    padding-bottom: 15px;
+}
+
+.menu-btn-ctnr {
+    position: relative;
+}
+
+.mn-btn {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    cursor: pointer;
+}
+
+
+/*Media Queres*/
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 26px;
+    }
+    .space-lg {
+        padding: 20px;
+    }
+    .mn-ttl {
+        font-size: 56px;
+    }
+    .hd-ctnr {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .logo-img {
+        max-width: 90px;
+    }
+    .hdr-btm {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .space-lg {
+        padding: 15px;
+    }
+    .mn-ttl {
+        font-size: 36px;
+    }
+    .hd-ctnr {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .logo-img {
+        max-width: 80px;
+    }
+    .hdr-btm {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .mn-header {
+        min-height: 300px;
+        background-position: 40% -375px;
+    }
+}

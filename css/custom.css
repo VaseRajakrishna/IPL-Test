@@ -1,6 +1,15 @@
 * {
     padding: 0px;
     margin: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 @font-face {
@@ -37,8 +46,28 @@ body {
     color: #000000;
 }
 
-.container {
-    max-width: 950px;
+.spr-ctnr {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.sub-hdr-ctnr:before,
+.spr-ctnr:before,
+.sub-hdr-ctnr:after,
+.spr-ctnr:after {
+    display: table;
+    content: " ";
+}
+
+.sub-hdr-ctnr:after,
+.spr-ctnr::after {
+    clear: both;
+}
+
+.xs-wd-6 {
+    width: 50%;
+    float: left;
 }
 
 h1 {
@@ -160,6 +189,10 @@ hr {
     padding-left: 0px;
 }
 
+.img-ctnr {
+    text-align: center;
+}
+
 .img-ctnr img {
     border-radius: 5px;
 }
@@ -219,7 +252,7 @@ hr {
     width: 100%;
     height: 100%;
     max-width: 500px;
-    min-height: 242px;
+    min-height: 231px;
     position: relative;
     -o-perspective: 900px;
     -webkit-perspective: 900px;
@@ -306,8 +339,67 @@ hr {
     cursor: pointer;
 }
 
+.pd-r {
+    padding-right: 15px;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+.right,
+.left {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.crsl-btn-ctnt {
+    text-align: center;
+}
+
 
 /*Media Queres*/
+
+@media (min-width: 768px) {
+    .spr-ctnr {
+        max-width: 750px;
+    }
+    .sm-wd-4,
+    .sm-wd-6 {
+        display: inline-table;
+    }
+    .sm-wd-4 {
+        width: 33%;
+    }
+    .sm-wd-6 {
+        width: 48%;
+    }
+}
+
+@media (min-width: 992px) {
+    .spr-ctnr {
+        max-width: 950px;
+    }
+    .m-wd-7 {
+        width: 58%;
+    }
+    .m-wd-5 {
+        width: 41%;
+    }
+    .md-wd-7,
+    .md-wd-5 {
+        display: inline-table;
+    }
+}
+
+@media (min-width: 1200px) {
+    .spr-ctnr {
+        max-width: 950px;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     body {
@@ -332,6 +424,9 @@ hr {
     .hdr-btm {
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+    .flip-card-3D-wrapper {
+        max-width: 400px;
     }
 }
 
@@ -362,5 +457,10 @@ hr {
     .mn-header {
         min-height: 300px;
         background-position: 40% -375px;
+    }
+    .info-ctnr {
+        line-height: 200px;
+        min-height: 200px;
+        padding-left: 10px;
     }
 }
